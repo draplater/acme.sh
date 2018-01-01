@@ -1,4 +1,6 @@
-FROM alpine:3.6
+ARG ALPINE_IMAGE
+ARG ALPINE_VERSION=3.7
+FROM ${ALPINE_IMAGE}:${ALPINE_VERSION}
 
 RUN apk update -f \
   && apk --no-cache add -f \
